@@ -31,8 +31,8 @@ public class anagramTest {
     @Test
     public void isAnagramNotCaseSensitiveTest(){
         //Given
-        String firstString= "desSert";
-        String secondString= "stRessed";
+        String firstString= "aCt";
+        String secondString= "cAt";
         anagram anagram_obj = new anagram();
         //When
         boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
@@ -53,6 +53,18 @@ public class anagramTest {
 
     }
 
+    @Test
+    public void isAlphaNumericAnagramTest(){
+        //Given
+        String firstString= "5below";
+        String secondString= "elbow5";
+        anagram anagram_obj = new anagram();
+        //When
+        boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
+        //Then
+        assertEquals(isAnagram,true);
+
+    }
 
 
 }
