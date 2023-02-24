@@ -2,7 +2,16 @@ package org.anagramproblem;
 
 import java.util.Arrays;
 public class anagram {
+    /*Our definition of Anagram :
+        -> can be a word, title phrase, or sentence
+        -> the letters are re-arranged and each letter is  used only once
+        -> no letter is skipped, don't consider White-spaces , not Case-sensitive
+        -> may include numbers as well
+      Reference : https://word.tips/faq/
+    */
+
     public boolean isAnagram(String str1,String str2){
+
         boolean result=true;
 
         //Remove white spaces in the strings, because they are also considered as characters while calculating length
@@ -17,10 +26,6 @@ public class anagram {
         //convert strings to lowercase
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
-
-//        //Remove white spaces in the strings
-//        str1 = str1.replaceAll("\\s+", "");
-//        str2 = str2.replaceAll("\\s+", "");
 
         //Convert string to character array to compare each character
         char [] char_set_str_1 = str1.toCharArray();
