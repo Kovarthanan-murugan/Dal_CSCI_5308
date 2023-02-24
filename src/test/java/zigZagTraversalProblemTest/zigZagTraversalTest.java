@@ -1,8 +1,10 @@
 package zigZagTraversalProblemTest;
 
 import org.zigZagTraversalProblem.zigZagTraversal;
+import org.zigZagTraversalProblem.zigZagNodes;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
 
 public class zigZagTraversalTest {
 
