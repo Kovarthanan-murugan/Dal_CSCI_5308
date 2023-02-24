@@ -5,10 +5,22 @@ public class anagram {
     public boolean isAnagram(String str1,String str2){
         boolean result=true;
 
+        //Remove white spaces in the strings, because they are also considered as characters while calculating length
+        str1 = str1.replaceAll("\\s+", "");
+        str2 = str2.replaceAll("\\s+", "");
+
         //if length of the strings are not same, don't proceed, return false
         if(str1.length() != str2.length() ){
             return false;
         }
+
+        //convert strings to lowercase
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+//        //Remove white spaces in the strings
+//        str1 = str1.replaceAll("\\s+", "");
+//        str2 = str2.replaceAll("\\s+", "");
 
         //Convert string to character array to compare each character
         char [] char_set_str_1 = str1.toCharArray();
