@@ -28,7 +28,30 @@ public class anagramTest {
         assertEquals(isAnagram,false);
 
     }
+    @Test
+    public void isAnagramNotCaseSensitiveTest(){
+        //Given
+        String firstString= "desSert";
+        String secondString= "stRessed";
+        anagram anagram_obj = new anagram();
+        //When
+        boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
+        //Then
+        assertEquals(isAnagram,true);
 
+    }
+    @Test
+    public void isAnagramSpaceTest(){
+        //Given
+        String firstString= "the classroom";
+        String secondString= "schoolmaster";
+        anagram anagram_obj = new anagram();
+        //When
+        boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
+        //Then
+        assertEquals(isAnagram,true);
+
+    }
 
 
 
