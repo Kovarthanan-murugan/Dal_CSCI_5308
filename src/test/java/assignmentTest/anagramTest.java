@@ -1,70 +1,42 @@
 package assignmentTest;
 
 import org.anagramproblem.anagram;
-import static org.junit.Assert.*;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import java.util.Arrays;
+import java.util.Collection;
+import static org.junit.Assert.*;
+@RunWith(Parameterized.class)
 public class anagramTest {
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][] {
+                { "study","dusty", true, "IsAnagramTest" },
+                { "study","dust", false, "isNotAnagramTest"  },
+                { "aCt","cAt", true, "isAnagramNotCaseSensitiveTest"},
+                { "the classroom","schoolmaster", true,"isAnagramSpaceTest" },
+                { "elbow5","5below", true,"isAlphaNumericAnagramTest" }
+        });
+    }
+
+    private String firstString;
+    private String secondString;
+    private boolean ouputExpected;
+    private String testName;
+    public anagramTest(String firstInput, String secondInput,boolean inputExpected,String testName) {
+        this.firstString = firstInput;
+        this.secondString = secondInput;
+        this.ouputExpected = inputExpected;
+        this.testName = testName;
+    }
     @Test
-    public void IsAnagramTest(){
-        //Given
-        String firstString= "study";
-        String secondString= "dusty";
+    public void anagramTests(){
+        System.out.println("Test:"+testName);
         anagram anagram_obj = new anagram();
         //When
         boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
         //Then
-        assertEquals(isAnagram,true);
-
+        assertEquals(isAnagram,ouputExpected);
     }
-    @Test
-    public void isNotAnagramTest(){
-        //Given
-        String firstString= "study";
-        String secondString= "dust";
-        anagram anagram_obj = new anagram();
-        //When
-        boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
-        //Then
-        assertEquals(isAnagram,false);
-
-    }
-    @Test
-    public void isAnagramNotCaseSensitiveTest(){
-        //Given
-        String firstString= "aCt";
-        String secondString= "cAt";
-        anagram anagram_obj = new anagram();
-        //When
-        boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
-        //Then
-        assertEquals(isAnagram,true);
-
-    }
-    @Test
-    public void isAnagramSpaceTest(){
-        //Given
-        String firstString= "the classroom";
-        String secondString= "schoolmaster";
-        anagram anagram_obj = new anagram();
-        //When
-        boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
-        //Then
-        assertEquals(isAnagram,true);
-
-    }
-
-    @Test
-    public void isAlphaNumericAnagramTest(){
-        //Given
-        String firstString= "5below";
-        String secondString= "elbow5";
-        anagram anagram_obj = new anagram();
-        //When
-        boolean isAnagram = anagram_obj.isAnagram(firstString,secondString);
-        //Then
-        assertEquals(isAnagram,true);
-
-    }
-
-
 }
