@@ -29,4 +29,16 @@ public class zigZagTraversalTest {
         //Then
         assertNotEquals(root,null);
     }
+
+    @Test
+    public void getHeightofBinaryTreeTest(){
+        //Given
+        int[] values = {1,2,3};
+        //When
+        zigZagTraversal traversal = new zigZagTraversal();
+        zigZagNodes root = traversal.createBinaryTree(values, 0);
+        int height = traversal.getHeight(root);
+        //Then
+        assertEquals(height,2);
+    }
 }
