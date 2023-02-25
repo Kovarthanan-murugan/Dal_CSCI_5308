@@ -41,4 +41,16 @@ public class zigZagTraversalTest {
         //Then
         assertEquals(height,2);
     }
+
+    public void forFullBinaryTreeTest(){
+        //Given
+        int[] values = {1,2,3,4,5,6,7};
+        //When
+        zigZagTraversal traversal = new zigZagTraversal();
+        zigZagNodes root = traversal.createBinaryTree(values, 0);
+        int[] traversed_list = traversal.zigzagLevelOrder(root,values.length);
+        //Then
+        int[] final_list = {1,3,2,4,5,6,7};
+        assertArrayEquals(traversed_list,final_list);
+    }
 }
