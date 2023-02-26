@@ -53,4 +53,18 @@ public class zigZagTraversalTest {
         int[] final_list = {1,3,2,4,5,6,7};
         assertArrayEquals(traversed_list,final_list);
     }
+
+    @Test
+    public void forSomeNodesWithNoChildTest(){
+        //Given
+        // -1 represents no child node (or) child node is NULL
+        int[] values = {1,2,3,-1,5,6,-1};
+        //When
+        zigZagTraversal traversal = new zigZagTraversal();
+        zigZagNodes root = traversal.createBinaryTree(values, 0);
+        int[] traversed_list = traversal.zigzagLevelOrder(root,values.length);
+        //Then
+        int[] final_list = {1,3,2,5,6};
+        assertArrayEquals(traversed_list,final_list);
+    }
 }
