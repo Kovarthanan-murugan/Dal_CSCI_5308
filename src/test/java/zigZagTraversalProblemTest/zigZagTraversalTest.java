@@ -4,67 +4,66 @@ import org.zigZagTraversalProblem.zigZagTraversal;
 import org.zigZagTraversalProblem.zigZagNodes;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import java.util.Arrays;
+import java.util.Collection;
 
-
-public class zigZagTraversalTest {
-
-    @Test
-    public void isRootIsEmpty(){
-        //Given
-        int[] values = {};
-        //When
-        zigZagTraversal traversal = new zigZagTraversal();
-        zigZagNodes root = traversal.createBinaryTree(values, 0);
-        //Then
-        assertEquals(root,null);
+@RunWith(Parameterized.class)
+public class zigZagTraversalTest  {
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][] {
+                {new int[]{}, null, "isRootIsEmpty","assertEquals"},
+                { new int[] {1}, null ,"isRootIsNotEmpty","assertNotEquals"},
+                { new int[] {1,2,3}, new int[]{2} , "getHeightofBinaryTreeTest","assertArrayEquals"},
+                { new int[] {1,2,3,4,5,6,7}, new int[] {1,3,2,4,5,6,7}, "forFullBinaryTreeTest","assertArrayEquals" },
+                { new int[] {1,2,3,-1,5,6,-1}, new int[] {1,3,2,5,6}, "forSomeNodesWithNoChildTest","assertArrayEquals"}
+        });
     }
 
-    @Test
-    public void isRootIsNotEmpty(){
-        //Given
-        int[] values = {1};
-        //When
-        zigZagTraversal traversal = new zigZagTraversal();
-        zigZagNodes root = traversal.createBinaryTree(values, 0);
-        //Then
-        assertNotEquals(root,null);
-    }
+    //@Parameter(0)
+    private int[] values = {};
 
-    @Test
-    public void getHeightofBinaryTreeTest(){
-        //Given
-        int[] values = {1,2,3};
-        //When
-        zigZagTraversal traversal = new zigZagTraversal();
-        zigZagNodes root = traversal.createBinaryTree(values, 0);
-        int height = traversal.getHeight(root);
-        //Then
-        assertEquals(height,2);
-    }
+    //@Parameter(1)
+    private int[] final_list = {};
+    //@Parameter(2)
+    private String testName;
+    //@Parameter(3)
+    private String assertType;
 
-    public void forFullBinaryTreeTest(){
+    public zigZagTraversalTest (int[] values, int[] final_list, String testName, String assertType) {
+        this.values = values;
+        this.final_list = final_list;
+        this.testName = testName;
+        this.assertType=assertType;
+    }
+    @Test
+    public void zigZagTraversalTests(){
         //Given
-        int[] values = {1,2,3,4,5,6,7};
-        //When
+        System.out.println("Test:"+testName);
         zigZagTraversal traversal = new zigZagTraversal();
+        //zigZagTraversalTest test = new zigZagTraversalTest(null,null,"","");
         zigZagNodes root = traversal.createBinaryTree(values, 0);
+        int[] tree_height = new int[]{traversal.getHeight(root)};
+        //When
+
         int[] traversed_list = traversal.zigzagLevelOrder(root,values.length);
         //Then
-        int[] final_list = {1,3,2,4,5,6,7};
-        assertArrayEquals(traversed_list,final_list);
-    }
 
-    @Test
-    public void forSomeNodesWithNoChildTest(){
-        //Given
-        // -1 represents no child node (or) child node is NULL
-        int[] values = {1,2,3,-1,5,6,-1};
-        //When
-        zigZagTraversal traversal = new zigZagTraversal();
-        zigZagNodes root = traversal.createBinaryTree(values, 0);
-        int[] traversed_list = traversal.zigzagLevelOrder(root,values.length);
-        //Then
-        int[] final_list = {1,3,2,5,6};
-        assertArrayEquals(traversed_list,final_list);
+        System.out.println(assertType);
+        if(assertType.equals("assertEquals")){
+            assertEquals(traversed_list, final_list);
+        }
+        else if(assertType.equals("assertNotEquals")){
+            assertNotEquals(traversed_list,final_list);
+        } else if (assertType.equals("assertArrayEquals")) {
+            if(testName.equals("getHeightofBinaryTreeTest")){
+                assertArrayEquals(tree_height,final_list);
+            }
+            else{
+                assertArrayEquals(traversed_list,final_list);
+            }
+        }
     }
 }
