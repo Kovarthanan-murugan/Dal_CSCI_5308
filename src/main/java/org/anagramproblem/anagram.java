@@ -10,6 +10,14 @@ public class anagram {
       Reference : https://word.tips/faq/
     */
 
+    /**
+     * This method is used to check if the given two strings are Anagram or not.
+     * @param   str1 String 1.
+     * @param   str2 String 2.
+     * @return  TRUE : is an Anagram ;
+     *          FALSE : is NOT an Anagram ; .
+     */
+
     public boolean isAnagram(String str1,String str2){
 
         boolean result=true;
@@ -36,6 +44,11 @@ public class anagram {
         Arrays.sort(char_set_str_2);
 
         for(int i=0;i<str1.length();i++){
+            /* If characters at index 'i' in both the strings are same:
+                    Continue and move to next index
+               Else:
+                    Is not an Anagram -> make result False -> Break the loop
+            */
             if(char_set_str_1[i] == char_set_str_2[i] ){
                 continue;}
             else{
