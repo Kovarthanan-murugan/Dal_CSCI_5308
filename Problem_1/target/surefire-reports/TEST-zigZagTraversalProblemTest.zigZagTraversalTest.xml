@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="zigZagTraversalProblemTest.zigZagTraversalTest" time="0.156" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\vikra\Desktop\MACS\TERM-1\CSCI 5308_Adv Topics in Software Develop\Assignment\1. TDD\assignment1dummy\target\test-classes;C:\Users\vikra\Desktop\MACS\TERM-1\CSCI 5308_Adv Topics in Software Develop\Assignment\1. TDD\assignment1dummy\target\classes;C:\Users\vikra\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\vikra\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Halifax"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\vikra\AppData\Local\Temp\surefire18352924347706369982\surefirebooter-20230227220255168_3.jar C:\Users\vikra\AppData\Local\Temp\surefire18352924347706369982 2023-02-27T22-02-54_704-jvmRun1 surefire-20230227220255168_1tmp surefire_0-20230227220255168_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\vikra\Desktop\MACS\TERM-1\CSCI 5308_Adv Topics in Software Develop\Assignment\1. TDD\assignment1dummy\target\test-classes;C:\Users\vikra\Desktop\MACS\TERM-1\CSCI 5308_Adv Topics in Software Develop\Assignment\1. TDD\assignment1dummy\target\classes;C:\Users\vikra\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\vikra\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\vikra"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\vikra\Desktop\MACS\TERM-1\CSCI 5308_Adv Topics in Software Develop\Assignment\1. TDD\assignment1dummy"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\vikra\AppData\Local\Temp\surefire18352924347706369982\surefirebooter-20230227220255168_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="vikra"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\vikra\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\vikra\AppData\Local\Temp\"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="C:\Users\vikra\Desktop\MACS\TERM-1\CSCI 5308_Adv Topics in Software Develop\Assignment\1. TDD\assignment1dummy"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Maven\apache-maven-3.9.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\vikra\AppData\Local\Microsoft\WindowsApps;;C:\Users\vikra\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vikra\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="zigZagTraversalTests[0]" classname="zigZagTraversalProblemTest.zigZagTraversalTest" time="0.011">
+    <system-out><![CDATA[Test:isRootIsEmpty
+inside height
+assertEquals
+]]></system-out>
+  </testcase>
+  <testcase name="zigZagTraversalTests[1]" classname="zigZagTraversalProblemTest.zigZagTraversalTest" time="0.034">
+    <system-out><![CDATA[Test:isRootIsNotEmpty
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+1 traversed-->1
+k-->0i-->0tra-->1
+assertNotEquals
+]]></system-out>
+  </testcase>
+  <testcase name="zigZagTraversalTests[2]" classname="zigZagTraversalProblemTest.zigZagTraversalTest" time="0.006">
+    <system-out><![CDATA[Test:getHeightofBinaryTreeTest
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+1 traversed-->1
+3 traversed-->3
+2 traversed-->2
+k-->0i-->0tra-->1
+k-->1i-->1tra-->3
+k-->2i-->2tra-->2
+assertArrayEquals
+]]></system-out>
+  </testcase>
+  <testcase name="zigZagTraversalTests[3]" classname="zigZagTraversalProblemTest.zigZagTraversalTest" time="0.018">
+    <system-out><![CDATA[Test:forFullBinaryTreeTest
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+leftHeight-->2
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+rightHeight-->2
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+leftHeight-->2
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+rightHeight-->2
+1 traversed-->1
+3 traversed-->3
+2 traversed-->2
+4 traversed-->4
+5 traversed-->5
+6 traversed-->6
+7 traversed-->7
+k-->0i-->0tra-->1
+k-->1i-->1tra-->3
+k-->2i-->2tra-->2
+k-->3i-->3tra-->4
+k-->4i-->4tra-->5
+k-->5i-->5tra-->6
+k-->6i-->6tra-->7
+assertArrayEquals
+]]></system-out>
+  </testcase>
+  <testcase name="zigZagTraversalTests[4]" classname="zigZagTraversalProblemTest.zigZagTraversalTest" time="0.014">
+    <system-out><![CDATA[Test:forSomeNodesWithNoChildTest
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+leftHeight-->2
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+rightHeight-->0
+rightHeight-->2
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+rightHeight-->1
+leftHeight-->2
+inside height
+beforeleft
+inside height
+beforeleft
+inside height
+leftHeight-->0
+inside height
+rightHeight-->0
+leftHeight-->1
+inside height
+rightHeight-->0
+rightHeight-->2
+1 traversed-->1
+3 traversed-->3
+2 traversed-->2
+5 traversed-->5
+6 traversed-->6
+k-->0i-->0tra-->1
+k-->1i-->1tra-->3
+k-->2i-->2tra-->2
+k-->3i-->4tra-->5
+k-->4i-->5tra-->6
+assertArrayEquals
+]]></system-out>
+  </testcase>
+</testsuite>
