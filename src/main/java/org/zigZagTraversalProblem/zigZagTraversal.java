@@ -32,7 +32,6 @@ public class zigZagTraversal {
         for (int indexofArray = 0, indexOfCopyArray = 0; indexofArray < traversedList.length; indexofArray++) {
             if (traversedList[indexofArray] != ignore) {
                 traversedListCopy[indexOfCopyArray] = traversedList[indexofArray];
-                System.out.println("indexOfCopyArray-->"+indexOfCopyArray+"indexofArray-->"+indexofArray+"tra-->"+traversedListCopy[indexOfCopyArray]);
                 indexOfCopyArray++;
             }
             else
@@ -56,7 +55,6 @@ public class zigZagTraversal {
      * @return zigzag traversed values of given tree.
      */
     public int[]  zigzagLevelOrder(zigZagNodes root,int count) {
-        // System.out.println("inside zizag");
         if (root == null) {
             return null;
         }
@@ -84,11 +82,8 @@ public class zigZagTraversal {
         if (node == null) {
             return 0;
         }
-        System.out.println("beforeleft");
         int leftHeight = getHeight(node.left);
-        System.out.println("leftHeight-->"+leftHeight);
         int rightHeight = getHeight(node.right);
-        System.out.println("rightHeight-->"+rightHeight);
 
         return Math.max(leftHeight,rightHeight)+1;
     }
@@ -108,9 +103,7 @@ public class zigZagTraversal {
         }
 
         if (level == 1) {
-            System.out.print(node.val + " ");
             traversedFinal[traversedCount] = node.val;
-            System.out.println("traversed-->"+ traversedFinal[traversedCount]);
             traversedCount++;
         } else if (level > 1) {
             if (isZigzag) {
